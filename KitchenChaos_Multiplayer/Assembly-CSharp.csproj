@@ -59,60 +59,61 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\SelectedCounterVisual.cs" />
-    <Compile Include="Assets\Scripts\MusicManager.cs" />
     <Compile Include="Assets\Scripts\Counters\DeliveryCounter.cs" />
-    <Compile Include="Assets\Scripts\UI\MainMenuUI.cs" />
     <Compile Include="Assets\Scripts\UI\DeliveryManagerSingleUI.cs" />
     <Compile Include="Assets\Scripts\Counters\BaseCounter.cs" />
     <Compile Include="Assets\Scripts\UI\DeliveryResultUI.cs" />
     <Compile Include="Assets\Scripts\Counters\ContainerCounterVisual.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\CuttingRecipeSO.cs" />
-    <Compile Include="Assets\Scripts\UI\GamePauseUI.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RecipeListSO.cs" />
     <Compile Include="Assets\Scripts\ResetStaticDataManager.cs" />
-    <Compile Include="Assets\Scripts\LoaderCallback.cs" />
-    <Compile Include="Assets\Scripts\IHasProgress.cs" />
     <Compile Include="Assets\Scripts\Counters\TrashCounter.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\BurningRecipeSO.cs" />
-    <Compile Include="Assets\Scripts\PlateKitchenObject.cs" />
     <Compile Include="Assets\Scripts\UI\StoveBurnFlashingBarUI.cs" />
     <Compile Include="Assets\Scripts\UI\PlateIconsUI.cs" />
-    <Compile Include="Assets\Scripts\LookAtCamera.cs" />
-    <Compile Include="Assets\Scripts\Counters\ClearCounter.cs" />
     <Compile Include="Assets\Scripts\PlateCompleteVisual.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\KitchenObjectSO.cs" />
-    <Compile Include="Assets\Scripts\UI\GamePlayingClockUI.cs" />
     <Compile Include="Assets\Scripts\Loader.cs" />
     <Compile Include="Assets\Scripts\Counters\StoveCounter.cs" />
     <Compile Include="Assets\Scripts\Counters\StoveCounterSound.cs" />
     <Compile Include="Assets\Scripts\PlayerSounds.cs" />
+    <Compile Include="Assets\Scripts\UI\OptionsUI.cs" />
+    <Compile Include="Assets\Scripts\Counters\StoveCounterVisual.cs" />
+    <Compile Include="Assets\PlayerInputActions.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\DeliveryManager.cs" />
+    <Compile Include="Assets\Scripts\Counters\PlatesCounterVisual.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\AudioClipRefsSO.cs" />
+    <Compile Include="Assets\Scripts\UI\TutorialUI.cs" />
+    <Compile Include="Assets\Scripts\UI\GameStartCountdownUI.cs" />
+    <Compile Include="Assets\Scripts\UI\GameOverUI.cs" />
+    <Compile Include="Assets\Scripts\UI\ProgressBarUI.cs" />
+    <Compile Include="Assets\Scripts\KitchenGameManager.cs" />
+    <Compile Include="Assets\Scripts\MusicManager.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuUI.cs" />
+    <Compile Include="Assets\Scripts\UI\TestingNetcodeUI.cs" />
+    <Compile Include="Assets\Scripts\UI\GamePauseUI.cs" />
+    <Compile Include="Assets\Scripts\LoaderCallback.cs" />
+    <Compile Include="Assets\Scripts\IHasProgress.cs" />
+    <Compile Include="Assets\Scripts\PlateKitchenObject.cs" />
+    <Compile Include="Assets\Scripts\LookAtCamera.cs" />
+    <Compile Include="Assets\Scripts\Counters\ClearCounter.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\KitchenObjectSO.cs" />
+    <Compile Include="Assets\Scripts\UI\GamePlayingClockUI.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimator.cs" />
     <Compile Include="Assets\Scripts\Counters\ContainerCounter.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\FryingRecipeSO.cs" />
-    <Compile Include="Assets\Scripts\UI\OptionsUI.cs" />
-    <Compile Include="Assets\Scripts\Counters\StoveCounterVisual.cs" />
     <Compile Include="Assets\Scripts\Counters\CuttingCounter.cs" />
     <Compile Include="Assets\Scripts\IKitchenObjectParent.cs" />
     <Compile Include="Assets\Scripts\UI\StoveBurnWarningUI.cs" />
-    <Compile Include="Assets\PlayerInputActions.cs" />
     <Compile Include="Assets\Scripts\Counters\PlatesCounter.cs" />
     <Compile Include="Assets\Scripts\GameInput.cs" />
-    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\KitchenObject.cs" />
-    <Compile Include="Assets\Scripts\DeliveryManager.cs" />
-    <Compile Include="Assets\Scripts\Counters\PlatesCounterVisual.cs" />
     <Compile Include="Assets\Scripts\UI\PlateIconsSingleUI.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\AudioClipRefsSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RecipeSO.cs" />
-    <Compile Include="Assets\Scripts\UI\TutorialUI.cs" />
-    <Compile Include="Assets\Scripts\UI\GameStartCountdownUI.cs" />
-    <Compile Include="Assets\Scripts\UI\GameOverUI.cs" />
     <Compile Include="Assets\Scripts\Counters\CuttingCounterVisual.cs" />
     <Compile Include="Assets\Scripts\UI\DeliveryManagerUI.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuExtrasUI.cs" />
-    <Compile Include="Assets\Scripts\UI\ProgressBarUI.cs" />
-    <Compile Include="Assets\Scripts\KitchenGameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -390,6 +391,9 @@
     <Reference Include="Unity.Burst.Cecil.Pdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
     </Reference>
@@ -398,6 +402,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
@@ -807,14 +814,17 @@
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    <Reference Include="Unity.Networking.Transport">
+      <HintPath>Library\ScriptAssemblies\Unity.Networking.Transport.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
@@ -824,6 +834,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Netcode.Components">
+      <HintPath>Library\ScriptAssemblies\Unity.Netcode.Components.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
@@ -840,11 +853,23 @@
     <Reference Include="Unity.InputSystem">
       <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Netcode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Netcode.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Netcode.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.Netcode.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Netcode.Editor.PackageChecker">
+      <HintPath>Library\ScriptAssemblies\Unity.Netcode.Editor.PackageChecker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
@@ -858,23 +883,26 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Networking.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Networking.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Cinemachine">
       <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
