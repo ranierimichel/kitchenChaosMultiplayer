@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\PlayerSounds.cs" />
     <Compile Include="Assets\Scripts\UI\OptionsUI.cs" />
     <Compile Include="Assets\Scripts\Counters\StoveCounterVisual.cs" />
+    <Compile Include="Assets\Scripts\OwnerNetworkAnimator.cs" />
     <Compile Include="Assets\Scripts\ClientNetworkTransform.cs" />
     <Compile Include="Assets\PlayerInputActions.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
