@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\RecipeListSO.cs" />
     <Compile Include="Assets\Scripts\ResetStaticDataManager.cs" />
     <Compile Include="Assets\Scripts\Counters\TrashCounter.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\KitchenObjectListSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\BurningRecipeSO.cs" />
     <Compile Include="Assets\Scripts\UI\StoveBurnFlashingBarUI.cs" />
     <Compile Include="Assets\Scripts\UI\PlateIconsUI.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="Assets\Scripts\UI\GamePlayingClockUI.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimator.cs" />
+    <Compile Include="Assets\Scripts\KitchenGameMultiplayer.cs" />
     <Compile Include="Assets\Scripts\Counters\ContainerCounter.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\FryingRecipeSO.cs" />
     <Compile Include="Assets\Scripts\Counters\CuttingCounter.cs" />
