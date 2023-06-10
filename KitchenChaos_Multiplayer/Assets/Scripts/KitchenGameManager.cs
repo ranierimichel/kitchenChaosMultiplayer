@@ -7,10 +7,7 @@ using UnityEngine;
 
 public class KitchenGameManager : NetworkBehaviour {
 
-
     public static KitchenGameManager Instance { get; private set; }
-
-
 
     public event EventHandler OnStateChanged;
     public event EventHandler OnLocalGamePaused;
@@ -19,7 +16,6 @@ public class KitchenGameManager : NetworkBehaviour {
     public event EventHandler OnMultiplayerGameUnpaused;
     public event EventHandler OnLocalPlayerReadyChanged;
 
-
     private enum State {
         WaitingToStart,
         CountdownToStart,
@@ -27,6 +23,7 @@ public class KitchenGameManager : NetworkBehaviour {
         GameOver,
     }
 
+    [SerializeField] private Transform playerPrefab;
 
     private NetworkVariable<State> state = new NetworkVariable<State>(State.WaitingToStart);
     private bool isLocalPlayerReady;
@@ -38,7 +35,6 @@ public class KitchenGameManager : NetworkBehaviour {
     private Dictionary<ulong, bool> playerReadyDictionary;
     private Dictionary<ulong, bool> playerPauseDictionary;
     private bool autoTestGamePausedState;
-
 
     private void Awake() {
         Instance = this;
@@ -58,6 +54,14 @@ public class KitchenGameManager : NetworkBehaviour {
 
         if (IsServer) {
             NetworkManager.Singleton.OnClientDisconnectCallback += NetworkManager_OnClientDisconnectCallback;
+            NetworkManager.Singleton.SceneManager.OnLoadEventCompleted += SceneManager_OnLoadEventCompleted;
+        }
+    }
+
+    private void SceneManager_OnLoadEventCompleted(string sceneName, UnityEngine.SceneManagement.LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut) {
+        foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds) {
+            Transform playerTransform = Instantiate(playerPrefab);
+            playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
         }
     }
 
@@ -188,7 +192,7 @@ public class KitchenGameManager : NetworkBehaviour {
         playerPauseDictionary[serverRpcParams.Receive.SenderClientId] = true;
         TestGamePausedState();
     }
-    
+
     [ServerRpc(RequireOwnership = false)]
     private void UnPauseGameServerRpc(ServerRpcParams serverRpcParams = default) {
         playerPauseDictionary[serverRpcParams.Receive.SenderClientId] = false;
