@@ -4,8 +4,7 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HostDisconectUI : MonoBehaviour
-{
+public class HostDisconectUI : MonoBehaviour {
     [SerializeField] private Button playAgainButton;
 
     private void Start() {
@@ -26,13 +25,17 @@ public class HostDisconectUI : MonoBehaviour
             // Server is shutting down
             Show();
         }
-        
+
     }
 
     private void Show() {
-        gameObject.SetActive(true);    
+        gameObject.SetActive(true);
     }
     private void Hide() {
-        gameObject.SetActive(false);    
+        gameObject.SetActive(false);
+    }
+
+    private void OnDestroy() {
+        NetworkManager.Singleton.OnClientDisconnectCallback -= NetworManager_OnClientDisconnectCallback;
     }
 }
