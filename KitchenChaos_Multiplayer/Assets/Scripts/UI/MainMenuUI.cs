@@ -13,12 +13,12 @@ public class MainMenuUI : MonoBehaviour {
 
 
     private void Awake() {
-        playSinglePlayerButton.onClick.AddListener(() => {
-            KitchenGameMultiplayer.playMultiplayer = false;
-            Loader.Load(Loader.Scene.LobbyScene);
-        });
         playMultiPlayerButton.onClick.AddListener(() => {
             KitchenGameMultiplayer.playMultiplayer = true;
+            Loader.Load(Loader.Scene.LobbyScene);
+        });
+        playSinglePlayerButton.onClick.AddListener(() => {
+            KitchenGameMultiplayer.playMultiplayer = false;
             Loader.Load(Loader.Scene.LobbyScene);
         });
         quitButton.onClick.AddListener(() => {
